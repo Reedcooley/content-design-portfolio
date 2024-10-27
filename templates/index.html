@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Design - Reed Cooley{% endblock %}
+
+{% block content %}
+
+  <div class="container home-page">
+    <header>
+      <h1>Reed Cooley</h1>
+      <p>Content Designer and Operations Lead</p>
+    </header>
+    <div class="button-container">
+      <!-- Link to the 'writing' route -->
+      <a href="{{ url_for('writing') }}" class="button">
+        <h2>Writing</h2>
+        <p>Precise and engaging copy that makes complex concepts clear and understandable</p>
+      </a>
+      <!-- Link to the 'design' route -->
+      <a href="{{ url_for('design') }}" class="button">
+        <h2>Design</h2>
+        <p>Clean and intuitive visual layouts that guide users where they need to go</p>
+      </a>
+      <!-- Link to the 'process_page' route to avoid conflict with 'process' POST route -->
+      <a href="{{ url_for('process_page') }}" class="button">
+        <h2>Process</h2>
+        <p>Automated workflows for efficiency, cost-savings, and quality control</p>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+{% endblock %}

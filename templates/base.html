@@ -1,0 +1,44 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" class="no-js"> <!-- Moved 'no-js' to <html> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure proper scaling on mobile devices -->
+  <title>{% block title %}Reed Cooley - Content Design and Operations{% endblock %}</title>
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script>
+    // Add the 'js' class to the <html> element as soon as possible
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+  </script>
+  {% block head %}{% endblock %} <!-- Placeholder for additional head elements -->
+
+</head>
+<body>    
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">Home</a></li>
+      <li><a href="{{ url_for('writing') }}" class="{% if request.endpoint == 'writing' %}active{% endif %}">Writing</a></li>
+      <li><a href="{{ url_for('design') }}" class="{% if request.endpoint == 'design' %}active{% endif %}">Design</a></li>
+      <li><a href="{{ url_for('process_page') }}" class="{% if request.endpoint == 'process_page' %}active{% endif %}">Process</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Reed Cooley | <a href="mailto:reedcooley@gmail.com" id="contact-me">Contact me</a></p>
+  </footer>
+
+  <!-- Include JavaScript files -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  {% block scripts %}{% endblock %} <!-- Placeholder for additional scripts -->
+</body>
+</html>

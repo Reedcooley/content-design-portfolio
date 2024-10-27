@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}Design - Reed Cooley{% endblock %}
+
+{% block content %}
+
+  <div class="container projects">
+    <header>
+      <h1>Writing</h1>
+      <p>I aim for clear, plain-language prose that's aware of its audience. These examples come from the support website for the password manager Dashlane.</p>
+    </header>
+    <!-- Passkeys Revamp Project -->
+    <div class="project-section" id="passkeys-revamp">
+      <div class="project-header">
+        <h2>Revamp of support content on passkeys</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: Our Help Center article on passkeys expanded over time as industry adoption and our own investment in passkeys grew. As the article became more overloaded with info, we saw a drop in its helpfulness score and received feedback that some visitors found the article confusing.</p>
+
+        <p><strong>Solution</strong>: I revamped the article with the aim of making it easier to navigate and improving the helpfulness score.</p>
+
+        <!-- Hidden content -->
+
+          <div class="more-content">
+            <p><strong>Challenges</strong>:</p>
+            <ul>
+              <li>Users have widely variable knowledge about passkeys.</li>
+              <li>Users are searching "passkeys" for different reasons—from general information to specific documentation on using them in our product.</li>
+              <li>Passkeys depend on complex technology, but the user experience is simple and familiar, which may confuse users about why it's such a big deal.</li>
+            </ul>
+          <p><strong>Approach</strong>:</p>
+          <ul>
+            <li>I created a parent article for all passkey-related questions that gives a high-level intro to passkeys and directs users to the appropriate content based on whether they need general info or product-specific documentation.</li>
+            </li>
+            <li>I developed focused child articles that deal with specific product documentation and deeper details.</li>
+            <li>In tandem with our product marketing and support teams, I created a series of articles explaining how to use our app to set up and store passkeys for specific sites like Amazon and GitHub.</li>
+          </ul>
+          <p><strong>Before and after</strong>:</p>
+          <ul>
+            <li><a href="https://web.archive.org/web/20240522030313/https://support.dashlane.com/hc/en-us/articles/7888558064274-Passkeys-in-Dashlane" target="_blank" rel="noopener noreferrer" aria-label="View the previous version in the Wayback Machine which opens in a new tab">View the previous version in the Wayback Machine</a></li>
+            <li><a href="https://support.dashlane.com/hc/articles/7888558064274" target="_blank" rel="noopener noreferrer" aria-label="Read the revamped suite of passkey articles which opens in a new tab">Read the revamped suite of passkey articles</a></li>
+          </ul>
+          <p><strong>Results</strong>: We acheived a significant rise in helpfulness score in the weeks following the article revamp. Similar approaches with our 2-factor authentication and billing content yielded sustained upticks in helpfulness scores.</p>
+          <p><strong>View similar approaches on other topics</strong>:</p>
+          <ul>
+            <li><a href="https://support.dashlane.com/hc/articles/202699341"  target="_blank" aria-label="Manage subscription and billing for Dashlane personal planswhich opens in a new tab">Manage subscription and billing for Dashlane personal plans
+            </a></li>
+            <li><a href="https://support.dashlane.com/hc/articles/202625042" target="_blank" aria-label="2-factor authentication (2FA) in Dashlane which opens in a new tab">2-factor authentication (2FA) in Dashlane</a></li>
+          </ul>
+
+          <img src="static/images/passkeys.png" alt="Passkeys Revamp Screenshot" class="project-image" style="display:none;">
+
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+
+    </div>
+
+    <!-- Explaining Dark Web Monitoring Project -->
+    <div class="project-section" id="dark-web-monitoring">
+      <div class="project-header">
+        <h2>Explanation of the security compliance of dark web monitoring</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: Our company upholds a zero-knowledge principle, meaning we protect customer data such that even company employees don’t have access to it. We introduced a new feature that detects if a customer's password has been found on the dark web. Before release, we anticipated that some customers might be confused about how the feature complies with our zero-knowledge policy.</p>
+
+        <p><strong>Solution</strong>: I created an FAQ question to explain how dark web monitoring works without exposing customer passwords.</p>
+
+        <!-- Hidden content -->
+        <div class="more-content">
+          <div><strong>Challenges</strong>: 
+          <ul>
+            <li>Customers have varying levels of technical proficiency but few are cybersecurity engineers.</li>
+            <li>Explaining dark web monitoring accurately requires highly technical engineering terms.</li>
+            <li>Some customers will find this question essential while others won't be worried about it at all.</li>
+          </ul>
+          </div>
+          <div><strong>Approach</strong>:
+          <ul>
+            <li>I created an FAQ to explain the feature.</li>
+            <li>I introduced technical concepts like hash functions and k-anonymity with short, straightforward definitions before explaining how they're used in the feature.</li>
+            <li>I folded the FAQ into an accordion header for easy access without overwhelming the article with technical detail.</li>
+          </ul>
+          </div>
+          <div><strong>Results</strong>:
+          <ul>
+            <li>Positive feedback from marketing, security, and engineering teams.</li>
+            <li>Successful high-profile launch with no reports of customer confusion.</li>
+            <li>No requests for clarification over a year after publication on a high-traffic article.</li>
+          </ul>
+          </div>
+          
+          <img src="static/images/dwmmp.png" alt="Dark Web Monitoring Screenshot" class="project-image">
+
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+
+    <!-- Add more writing projects as needed -->
+
+  </div>
+
+  {% endblock %}

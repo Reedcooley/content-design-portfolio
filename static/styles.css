@@ -1,0 +1,609 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  color: #333333; /* Neutral dark gray for main text */
+  line-height: 1.6;
+  background-color: #F0F4F8; /* Very light gray-blue background */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Center content horizontally and vertically */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin-left: 10%;
+  max-width: 100%;
+}
+
+.container.projects,
+.container.home-page,
+.container:has(.container.home-page) {
+  margin-left: 0;
+}
+
+footer {
+  padding: 0 0 1.25rem 0;
+    text-align: center;
+}
+
+.container:has(.projects) + footer {
+  text-align: left;
+  margin-left: 10%;
+}
+/* Header styling */
+.home-page header {
+  margin: 20px 0 40px 0;
+  text-align: center;
+}
+
+.projects header {
+  margin: 0 0 20px 0;
+  text-align: left;
+  max-width: 800px;
+}
+
+
+header h1 {
+  font-size: 2rem;
+  color: #2D4059; /* Primary dark blue for header text */
+  margin-bottom: 10px;
+}
+
+.projects h2 {
+  color: #2D4059;
+}
+header p {
+  font-size: 1em;
+  color: #2D4059; /* Muted blue for subheader */
+}
+
+a,
+a:visited {
+  color:#4A7C9C;
+}
+/* Button styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-container .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2D4059; /* Primary dark blue for text */
+  background-color: #FFFFFF;
+  border: 2px solid #2D4059;
+  padding: 20px;
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  width: 250px;
+}
+
+.button-container .button h2 {
+  margin-bottom: 10px;
+}
+
+.button-container .button p {
+  font-size: 0.9em;
+  color: #4A7C9C; /* Light blue for text inside buttons */
+}
+
+.button-container .button:hover p {
+  color: #FFFFFF;
+}
+
+.button-container .button:hover {
+  color: #FFFFFF;
+  background-color: #2D4059; /* Dark blue on hover */
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Apply box-sizing to all elements for consistent sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Navigation Bar Styles */
+nav {
+  width: 100%;
+  background-color: #F0F4F8; /* Very light gray-blue background */
+  border-bottom: 2px solid #2D4059; /* Dark blue bottom border */
+  margin-top: 20px;
+}
+
+/* Remove default padding and set up flex layout for the list */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-left: 10%; /* Maintain left padding as per original design */
+}
+
+/* Remove padding from list items */
+nav ul li {
+  padding: 0;
+  margin: 0 5px;
+}
+
+/* Base styles for navigation links */
+nav ul li a {
+  display: block; /* Ensure the link fills the entire list item */
+  text-decoration: none;
+  color: #2D4059; /* Primary dark blue for links */
+  font-weight: bold;
+  padding: 8px 15px; /* Increased padding for better click area */
+  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+
+/* Active state for the current navigation link */
+nav ul li a.active {
+  color: #FFFFFF; /* White text for active link */
+  background-color: #2D4059; /* Dark blue background for active link */
+  text-decoration: none;
+  margin-bottom: -2px; /* Pull the active link down to overlap the nav border */
+}
+
+/* Project Section Styles */
+.project-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  border: 1px solid #2D4059;
+  box-shadow: 0 0 0 0 #2D4059; /* Add a box-shadow with 0 width initially */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.project-header {
+  padding: 15px 25px;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.project-section:hover {
+  box-shadow: 0 0 0 1px #2D4059;
+}
+
+.project-header h1 {
+  font-size: 1.17rem;
+  margin: 0;
+  font-weight: normal;
+  color: #2D4059;
+}
+
+.project-content {
+  padding: 20px 20px 5px 20px;
+  border: 1px solid #E0E0E0; 
+  border-radius: 0 0 5px 5px;
+}
+
+.project-content h4 {
+  margin-top: 15px;
+  color: #2D4059; /* Primary dark blue */
+}
+
+.project-content strong {
+  color: #2D4059; /* Primary dark blue */
+
+}
+.project-content p, .project-content ul, .project-content ol {
+  margin-bottom: 15px;
+  color: #333333; /* Neutral dark gray for content */
+}
+
+.project-content ul, .project-content ol {
+  padding-left: 20px;
+}
+
+.project-content p + ul,
+.project-content p + ol {
+  margin-top: 5px;
+}
+
+.project-content p:has(+ ul),
+.project-content p:has(+ ol) {
+  margin-bottom: 5px;
+}
+
+.project-image {
+  max-width: 100%;
+  width: 700px;
+  height: auto;
+  display: block;    
+  margin: 20px auto;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+}
+
+.more-content {
+  display: block; /* Visible by default */
+}
+
+/* Add a class that hides .more-content when JavaScript is enabled */
+.js .more-content {
+  display: none;
+}
+.no-js #test-process {
+  display: none;
+}
+
+#test-process {
+  margin: 0;
+  padding: 0;
+
+}
+
+p.read-more {
+  display: inline-block;
+  min-width: 83px;
+  text-decoration: none;
+  color: #4A7C9C; 
+}
+
+.project-section:hover {
+  cursor: pointer;
+}
+.project-section:hover .read-more {
+  text-decoration: underline;
+}
+
+.project-section:hover *:has(a:hover) + .read-more,
+.project-section:hover *:has(.zendesk-form:hover) + .read-more {
+  text-decoration: none;
+  cursor: unset;
+
+}
+
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  /* Existing responsive styles remain unchanged */
+  .project-section {
+    width: 100%;
+  }
+}
+/* Button styling */
+.button-container.before-after {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Added for spacing between buttons */
+}
+
+.button-container.before-after .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2D4059; /* Primary dark blue for text */
+  background-color: #FFFFFF;
+  border: 2px solid #2D4059;
+  padding: 10px 20px; /* Adjusted padding for buttons */
+  margin: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-container.before-after .button:hover {
+  color: #FFFFFF;
+  background-color: #2D4059; /* Dark blue on hover */
+}
+
+
+  /* Form styling */
+  .zendesk-form {
+    margin: 20px;
+    font-size: .85rem;
+  }
+
+  .zendesk-form label {
+    font-weight: bold;
+    color: #2D4059;
+  }
+
+  .zendesk-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+  }
+
+  .zendesk-form input[type="submit"] {
+    background-color: #2D4059;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  .zendesk-form input[type="submit"]:hover {
+    background-color: #1B2838;
+  }
+
+  .error-message {
+    color: red;
+    margin: 10px 5px;
+  }
+
+  #in-process-message {
+    margin: 10px 5px;
+  }
+
+  #in-process-message a {
+    text-decoration: underline;
+  }
+
+  .success-message {
+    color: #4A7C9C;
+    margin: 10px 5px;
+
+  }
+
+
+  /* styles.css */
+
+/* Base Styles (Ensure these are defined for larger screens) */
+/* ... Your existing CSS ... */
+
+/* Responsive Styles for Small Screens */
+@media only screen and (max-width: 768px) {
+
+  /* General Container Adjustments */
+  .container {
+    padding: 0;
+    margin: 0;     
+  }
+
+  .container.projects {
+    padding: 1rem 1.5rem; /* Reduced padding for smaller screens */
+  }
+
+  .container:has(.projects) + footer {
+    margin: 0;
+    padding: 0 0 1rem 1.5rem; /* Reduced padding for smaller screens */
+  }
+  /* Home Page Specific Styles */
+  .home-page header {
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  .home-page h1 {
+    font-size: 1.5em;
+  }
+
+h2 {
+    font-size: 1.2em;
+  }
+
+
+  .home-page p {
+    font-size: 0.95em;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced space between buttons */
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Optional: Add borders for better separation */
+    border-radius: 4px;     /* Slightly smaller border radius */
+    background-color: #f9f9f9; /* Optional: Background color */
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+    transition: background-color 0.3s ease;
+  }
+
+
+  .button h2 {
+    font-size: 1.3em;
+    margin-bottom: 4px;
+  }
+
+  .button p {
+    font-size: 0.9em;
+  }
+
+  /* Navigation Bar Styles */
+  nav {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #D6DEE4 ; 
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  nav ul li a,
+  nav ul li a:visited,
+  nav ul li a:hover {    
+    display: block;
+    color: #2D4059; 
+    padding: 10px; 
+    text-decoration: none;
+    border-bottom: 1px solid #2D4059; /* Optional: Separator */
+    font-size: 1em; /* Adjusted font size */
+    border-radius: 0;
+
+  }
+
+  nav ul li a.active {
+    color: #F0F4F8; 
+    background-color: #2D4059; /* Hover and active state */
+  }
+
+  /* Projects Section */
+  .projects header {
+    padding: 5px 0; /* Reduced vertical padding */
+  }
+
+  .projects h1 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+  }
+
+  .projects p {
+    font-size: 0.95em;
+    padding: 0 5px; /* Reduced horizontal padding */
+  }
+
+  .project-section {
+    margin-bottom: 1rem; /* Reduced spacing between projects */
+    box-shadow: none !important;
+  }
+
+
+  .project-header h1 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .project-content {
+    padding: 10px; 
+  }
+
+  .project-content p,
+  .project-content ul {
+    font-size: 0.9em;
+  }
+
+  .project-content ul {
+    padding-left: 25px; 
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem; /* Reduced bottom margin */
+  }
+
+  .read-more {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 0;
+    font-size: 0.95em;
+  }
+
+  p.read-more {
+    text-decoration: underline;
+    margin-bottom: 0.4rem;
+
+  }
+
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 10px 5px; /* Reduced padding */
+    font-size: 0.8em;
+    background-color: #F0F4F8; /* Optional: Background color */
+  }
+
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Optional: Adjust Images in Design Projects */
+  .project-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Optional: Improve Click/Tap Targets */
+  a.button,
+  nav ul li a,
+  .read-more {
+    touch-action: manipulation;
+  }
+
+  /* Optional: Enhance Accessibility */
+  a.button:focus,
+  nav ul li a:focus,
+  .read-more:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+  }
+  #contact-me {
+    text-decoration: underline;
+  }
+
+  .container.home-page {
+    margin-top: 40px;
+  }
+
+
+
+}
+
+#contact-me {
+  color: #4A7C9C;
+}
+
+nav:has(+ .container .container.home-page) {
+  display: none;
+}

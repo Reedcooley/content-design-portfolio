@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Design - Reed Cooley{% endblock %}
+
+{% block content %}
+
+  <div class="container projects">
+    <header>
+      <h1>Design</h1>
+      <p>I use layout and visual design in concert with written copy to meet users where they're at and guide them intuitively to the info they're looking for. These examples come from recent revamps to the Dashlane support site.</p>
+    </header>
+
+    <!-- Vertically Stacked Design Projects -->
+    <div class="project-section" id="tabs">
+      <div class="project-header">
+        <h2>Redesign of tabs for usability and brand alignment</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: We use tabs for showing flows on different platforms, but we received customer feedback that it wasn't obvious how you switch between tabs.</p>
+
+        <p><strong>Solution</strong>: </p>
+        <ul>
+          <li>I redesigned our tabs to make clear which tab is selected, how to switch to another tab, and which content is included in each tab.</li>
+          <li>I aligned the design with company branding using our palette and adding rounded edges.</li>
+          <li>I adjusted the CSS to allow for seamless embedding of our collapsible headings.</li>
+        </ul>
+        <!-- Hidden content -->
+        <div class="more-content">
+          <p><strong>Before: Simple tabs</strong></p>
+          <img src="/static/images/tabs-before.png" alt="Tabs before redesign" class="project-image">
+          <p><strong>After: Simple tabs</strong></p>
+          <img src="/static/images/tabs-after.png" alt="Tabs after redesign" class="project-image">
+          <p><strong>After: Tabs with zippies embedded</strong></p>
+          <img src="/static/images/tabs-after-embedded.png" alt="Tabs after redesign with embedded zippies" class="project-image">
+
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+
+
+
+    <div class="project-section" id="dark-web-monitoring">
+      <div class="project-header">
+        <h2>Reorganization of Help Center information architecture</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: Our Help Center was originally created by a support team without a design background, and over time the site became cluttered and overloaded with information.</p>
+        <p><strong>Solution</strong>:</p>
+        <ul>
+          <li>I created a logical structure and heirarchy for categories, sections, and articles.</li>
+          <li>I consolidated the number of categories and sections.</li>
+          <li>I redesigned category pages for easier navigation and a more attractive presentation.</li>
+        </ul>
+        <!-- Hidden content -->
+        <div class="more-content">
+         
+          <p><strong>Before: Navigation menu</strong></p>
+          <img src="/static/images/nav-before.png" alt="Nav before redesign" class="project-image">
+          <p><strong>After: Navigation menu</strong></p>
+          <img src="/static/images/nav-after.png" alt="Nav after redesign" class="project-image">
+          <p><strong>Before: Category page</strong></p>
+          <img src="/static/images/category-before.png" alt="Category page before redesign" class="project-image">
+          <p><strong>After: Category page</strong></p>
+          <img src="/static/images/category-after.png" alt="Category page after redesign" class="project-image">
+
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+
+
+    <div class="project-section" id="dark-web-monitoring">
+      <div class="project-header">
+        <h2>Creation of subtle accordion element for extra info within flows</h2>
+            <!-- Read More Link in header -->
+
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: We use accordions for collapsing major sections and making our support articles easier to navigate. But these elements can be cumbersome in situations where you want to create a subtle aside within a text or flow.</p>
+        <p><strong>Solution</strong>: I created a lightweight zippy that can be used within flows but doesn't immediately dominate your attention when you open the page.</p>
+        <div class="more-content">
+
+          <img src="static/images/simple-zippy-closed.png" alt="Simple zippy closed" class="project-image">
+          <img src="static/images/simple-zippy-open.png" alt="Simple zippy open" class="project-image">
+
+        </div>
+
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+
+      </div>
+    </div>
+
+    <!-- Add more design projects as needed -->
+
+  </div>
+
+
+{% endblock %}

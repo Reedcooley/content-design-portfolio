@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Design - Reed Cooley{% endblock %}
+
+{% block content %}
+
+  <div class="container projects">
+    <header>
+      <h1>Process</h1>
+      <p>I aim to find ways to deliver high-quality content efficiently and use automation to reduce the tedious aspects of content management. These examples were designed for Zendesk integration but can be adapted to other content management systems.</p>
+    </header>
+    <div class="project-section" id="article-management">
+      <div class="project-header">
+        <h2>Living article management spreadsheet</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: As a blog or support website grows, it can be difficult to keep track of pages and other associated information like page locations, labels, and authors.</p>
+        <p><strong>Solution</strong>: I created a script that pulls metadata for all pages on a Zendesk-based site automatically into a shared team spreadsheet.</p>
+
+        <!-- Hidden content -->
+          <div class="more-content">
+            <p><strong>Details</strong>: The script exports article metadata from Zendesk API at regular intervals, reformats the data, and imports it to a shared spreadsheet on Google Sheets.</p>
+            <img src="/static/images/article-management.png" alt="Article management spreadsheet" class="project-image">
+            <div id="test-process" style="display: none;">
+              <p><strong>Test the process</strong>: Enter the subdomain of any Zendesk-based site (e.g. "slack" or "mailchimp"). For the purposes of the test, the article data will download to a CSV rather than exporting to Google Sheets. 
+              <strong>Note</strong>: Some sites created an authentication layer for this API endpoint. In those cases the test won't work.</p> 
+
+            <form id="zendesk-form" class="zendesk-form">
+              <label for="subdomain">Enter your Zendesk subdomain:</label>
+              <input type="text" id="subdomain" name="subdomain">
+              <input type="submit" value="Download spreadsheet">
+              <div id="error-message" class="error-message"></div>
+
+            </form>
+          </div>
+
+          </div>
+  
+
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+    <!-- Vertically Stacked Project Sections -->
+    <div class="project-section" id="broken-links">
+      <div class="project-header">
+        <h2>Broken link finder</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: Even if careful link checks are built into the content management process, broken links can occur for all kinds of reasons.</p>
+
+        <p><strong>Solution</strong>: I created a script that checks automatically for broken links and exports the link info to a shared spreadsheet.</p>
+
+        <!-- Hidden content -->
+        <div class="more-content">
+          <p><strong>Details</strong>: The script checks all links in published articles and exports info regarding broken links to a shared spreadsheet in Google Sheets. The spreadsheet displays the number of broken links found in each article for each locale as well as the error code encountered.
+          </p>
+          <p>The script is intended to return some false positives. For example, if the target page of a link requires authentication, the link still appears on the list. In this situation, you can manually select the ignore box in the spreadsheet. If the same link and error code appear the next time you run the script, the ignore box remains selected.
+          </p>
+          <img src="/static/images/broken-links.png" alt="Broken links spreadsheet" class="project-image">
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+
+
+    <div class="project-section" id="dark-web-monitoring">
+      <div class="project-header">
+        <h2>AI-based translation app</h2>
+            <!-- Read More Link in header -->
+      </div>
+      <div class="project-content">
+        <!-- Visible by default -->
+        <p><strong>Problem</strong>: Localizing a website is costly, time-consuming, and also potentially error prone.</p>
+        <p><strong>Solution</strong>: I developed an LLM-powered app that can integrate with content management systems and provides inexpensive, instaneous, and high-quality translations.</p>
+
+        <!-- Hidden content -->
+        <div class="more-content">
+          <p><strong>Details</strong>: Recent LLM models like GPT-4o and Claude Sonnet 3.5 are excellent translators, especially for simple, concrete writing such as you find in good support content. This LLM-based app reduced my teams translation costs by over 90% and gave us a lot more control over translated content.</p>
+          <p>The translation app includes these features: </p>
+          <ul>
+            <li>Integration with Zendesk and any major LLM.
+            </li>
+            <li>Bulk-translation of multiple articles at once.
+            </li>
+            <li>Targeted translation of individual articles and ability to preview updates before publishing.
+            </li> 
+            <li>Translation of entire article or "partial translation" that targets only the sections of each article that have been updated.</li> 
+            <li>Ad-hoc translations of shorter texts.
+            </li> 
+            <li>Integration with an in-house glossary.</li> 
+
+          </ul>
+          <img src="static/images/translation-queue.png" alt="Translation queue" class="project-image">
+          <img src="static/images/translation-individual.png" alt="Individual translation" class="project-image">
+
+        </div>
+        <p class="read-more" aria-label="Show project details">See details</p>
+
+      </div>
+    </div>
+
+
+
+
+    <!-- Add more project sections as needed -->
+
+  </div>
+
+  {% endblock %}
+
