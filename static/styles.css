@@ -126,6 +126,10 @@ a:visited {
   background-color: #2D4059 !important; /* Dark blue on hover */
 }
 
+.home-page .button-container .button:hover p {
+  color: #FFFFFF !important;
+}
+
 @media (max-width: 768px) {
   .button-container {
     flex-direction: column;
