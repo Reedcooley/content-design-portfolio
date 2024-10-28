@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
+
   /*
   // New code for form submission and validation
   const form = document.getElementById('zendesk-form');
@@ -202,5 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
       messageDiv.classList.remove('success-message', 'error-message'); // Remove classes after timeout
     }, timeout);
   }
-});
+
 */
+});

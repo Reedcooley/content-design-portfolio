@@ -454,6 +454,10 @@ h2 {
     transition: background-color 0.3s ease;
   }
 
+  a {
+    outline: none;
+    box-shadow: none;
+  }
 
   .button h2 {
     font-size: 1.3em;
@@ -566,10 +570,14 @@ h2 {
   footer {
     text-align: center;
     padding: 10px 5px; /* Reduced padding */
+    
     font-size: 0.8em;
     background-color: #F0F4F8; /* Optional: Background color */
   }
 
+  .home-page + footer {
+
+  }
 
   footer a:hover {
     text-decoration: underline;
