@@ -120,9 +120,24 @@ a {
   background-color: #2D4059; /* Dark blue on hover */
 }
 
-.home-page .button-container .button:hover {
+/* Define base styles */
+.home-page .button-container .button p {
+  color: #4A7C9C;
+}
+
+/* Define styles for visited links */
+.home-page .button-container .button:visited p {
+  color: #4A7C9C;
+}
+
+/* Define styles for hover state */
+.home-page .button-container .button:hover p {
   color: #FFFFFF !important;
-  background-color: #2D4059 !important; /* Dark blue on hover */
+}
+
+/* Define styles for visited links on hover */
+.home-page .button-container .button:visited:hover p {
+  color: #FFFFFF !important;
 }
 
 
@@ -622,16 +637,3 @@ nav:has(+ .container .container.home-page) {
   display: none;
 }
 
-
-.home-page .button-container .button:hover:visited p {
-  color: #FFFFFF !important;
-}
-
-.home-page .button-container .button p {
-  pointer-events: none; /* Prevents the <p> from reacting to its own states */
-}
-
-/* Color for the <p> text only on hover */
-.home-page .button-container .button:hover p {
-  color: #FFFFFF !important;
-}
