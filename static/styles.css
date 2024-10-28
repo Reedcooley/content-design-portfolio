@@ -121,6 +121,11 @@ a:visited {
   background-color: #2D4059; /* Dark blue on hover */
 }
 
+.home-page .button-container .button.selected:hover {
+  color: #FFFFFF;
+  background-color: #2D4059 !important; /* Dark blue on hover */
+}
+
 @media (max-width: 768px) {
   .button-container {
     flex-direction: column;
@@ -333,10 +338,6 @@ p.read-more {
   background-color: #2D4059; /* Dark blue on hover */
 }
 
-.button-container.before-after .button:hover:selected {
-  color: #FFFFFF;
-  background-color: #2D4059; /* Dark blue on hover */
-}
 
 
   /* Form styling */
