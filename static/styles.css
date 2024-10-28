@@ -617,6 +617,15 @@ nav:has(+ .container .container.home-page) {
 }
 
 
+.home-page .button-container .button:hover:visited p {
+  color: #FFFFFF !important;
+}
+
+.home-page .button-container .button p {
+  pointer-events: none; /* Prevents the <p> from reacting to its own states */
+}
+
+/* Color for the <p> text only on hover */
 .home-page .button-container .button:hover p {
   color: #FFFFFF !important;
 }
