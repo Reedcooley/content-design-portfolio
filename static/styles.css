@@ -75,8 +75,7 @@ header p {
   color: #2D4059; /* Muted blue for subheader */
 }
 
-a,
-a:visited {
+a {
   color:#4A7C9C;
 }
 /* Button styling */
