@@ -454,11 +454,13 @@ h2 {
     transition: background-color 0.3s ease;
   }
 
-  a {
+  a,
+  a:focus,
+  a:active {
     outline: none;
     box-shadow: none;
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight on iOS */
   }
-
   .button h2 {
     font-size: 1.3em;
     margin-bottom: 4px;
@@ -575,10 +577,6 @@ h2 {
     background-color: #F0F4F8; /* Optional: Background color */
   }
 
-  .home-page + footer {
-
-  }
-
   footer a:hover {
     text-decoration: underline;
   }
@@ -609,6 +607,7 @@ h2 {
 
   .container.home-page {
     margin-top: 40px;
+    margin-bottom: 20px;
   }
 
 
