@@ -332,6 +332,11 @@ p.read-more {
   background-color: #2D4059; /* Dark blue on hover */
 }
 
+.button-container.before-after .button:hover:selected {
+  color: #FFFFFF;
+  background-color: #2D4059; /* Dark blue on hover */
+}
+
 
   /* Form styling */
   .zendesk-form {
