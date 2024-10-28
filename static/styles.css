@@ -159,7 +159,8 @@ nav ul li {
 }
 
 /* Base styles for navigation links */
-nav ul li a {
+nav ul li a,
+nav ul li a:visited {
   display: block; /* Ensure the link fills the entire list item */
   text-decoration: none;
   color: #2D4059; /* Primary dark blue for links */
@@ -169,9 +170,9 @@ nav ul li a {
   transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
-
 /* Active state for the current navigation link */
-nav ul li a.active {
+nav ul li a.active, 
+nav ul li a.active:visited {
   color: #FFFFFF; /* White text for active link */
   background-color: #2D4059; /* Dark blue background for active link */
   text-decoration: none;
