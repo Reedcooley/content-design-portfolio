@@ -126,9 +126,6 @@ a:visited {
   background-color: #2D4059 !important; /* Dark blue on hover */
 }
 
-.home-page .button-container .button:hover p {
-  color: #FFFFFF !important;
-}
 
 @media (max-width: 768px) {
   .button-container {
@@ -617,4 +614,9 @@ h2 {
 
 nav:has(+ .container .container.home-page) {
   display: none;
+}
+
+
+.home-page .button-container .button:hover p {
+  color: #FFFFFF !important;
 }

@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  /*
   // New code for form submission and validation
   const form = document.getElementById('zendesk-form');
   const messageDiv = document.getElementById('error-message'); // Reuse the same div for error and success messages
@@ -202,3 +203,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }, timeout);
   }
 });
+*/
