@@ -204,7 +204,7 @@ nav ul li a.active:visited {
   width: 100%;
   max-width: 800px;
   margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #FFFFFF;
   overflow: hidden;
   border: 1px solid #2D4059;
@@ -218,6 +218,8 @@ nav ul li a.active:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
+    border-radius: 4px;
+
 }
 
 
