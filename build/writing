@@ -1,8 +1,44 @@
-{% extends "base.html" %}
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" class="no-js"> <!-- Moved 'no-js' to <html> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure proper scaling on mobile devices -->
+  <title>Writing - Reed Alexander Cooley</title>
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    // Add the 'js' class to the <html> element as soon as possible
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+  </script>
+   <!-- Placeholder for additional head elements -->
 
-{% block title %}Writing - Reed Alexander Cooley{% endblock %}
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMCH14ZV0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-{% block content %}
+  gtag('config', 'G-JMCH14ZV0M');
+</script>
+<body>    
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">Home</a></li>
+      <li><a href="writing" class="active">Writing</a></li>
+      <li><a href="design" class="">Design</a></li>
+      <li><a href="process_page" class="">Process</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    
 
   <div class="container projects">
     <header>
@@ -36,7 +72,7 @@
 
           <p><strong>Results</strong>: This revamp is recent, but similar structural approaches on other topics have led to sustained increases in helpfulness scores of up to 12 percentage points.</p>
 
-          <img src="{{ url_for('static', filename='images/passkeys.png') }}" alt="Passkeys Revamp Screenshot" class="project-image" style="display:none;">
+          <img src="static/images/passkeys.png" alt="Passkeys Revamp Screenshot" class="project-image" style="display:none;">
         </div>
 
         <p class="read-more">See details</p>
@@ -59,7 +95,7 @@
             <li>Supported a high-profile product launch.</li>
           </ul>
 
-          <img src="{{ url_for('static', filename='images/dwmmp.png') }}" alt="Dark Web Monitoring Screenshot" class="project-image">
+          <img src="static/images/dwmmp.png" alt="Dark Web Monitoring Screenshot" class="project-image">
         </div>
 
         <p class="read-more">See details</p>
@@ -68,4 +104,16 @@
 
   </div>
 
-{% endblock %}
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Reed Alexander Cooley | <a href="mailto:reedcooley@gmail.com" id="contact-me">Contact me</a></p>
+  </footer>
+
+  <!-- Include JavaScript files -->
+  <script src="static/script.js"></script>
+   <!-- Placeholder for additional scripts -->
+</body>
+</html>

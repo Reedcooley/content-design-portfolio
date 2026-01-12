@@ -1,8 +1,44 @@
-{% extends "base.html" %}
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" class="no-js"> <!-- Moved 'no-js' to <html> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure proper scaling on mobile devices -->
+  <title>Process - Reed Alexander Cooley</title>
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    // Add the 'js' class to the <html> element as soon as possible
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+  </script>
+   <!-- Placeholder for additional head elements -->
 
-{% block title %}Process - Reed Alexander Cooley{% endblock %}
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMCH14ZV0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-{% block content %}
+  gtag('config', 'G-JMCH14ZV0M');
+</script>
+<body>    
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">Home</a></li>
+      <li><a href="writing" class="">Writing</a></li>
+      <li><a href="design" class="">Design</a></li>
+      <li><a href="process_page" class="active">Process</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    
 
   <div class="container projects">
     <header>
@@ -36,8 +72,8 @@
             <li>Integration with an in-house glossary.</li>
           </ul>
 
-          <img src="{{ url_for('static', filename='images/translation-queue.png') }}" alt="Translation queue" class="project-image">
-          <img src="{{ url_for('static', filename='images/translation-individual.png') }}" alt="Individual translation" class="project-image">
+          <img src="static/images/translation-queue.png" alt="Translation queue" class="project-image">
+          <img src="static/images/translation-individual.png" alt="Individual translation" class="project-image">
         </div>
 
         <p class="read-more">See details</p>
@@ -74,7 +110,7 @@
         <p><strong>Solution</strong>: I built a script that pulls Zendesk metadata into a shared spreadsheet.</p>
 
         <div class="more-content">
-          <img src="{{ url_for('static', filename='images/article-management.png') }}" alt="Article management spreadsheet" class="project-image">
+          <img src="static/images/article-management.png" alt="Article management spreadsheet" class="project-image">
         </div>
 
         <p class="read-more">See details</p>
@@ -90,7 +126,7 @@
         <p><strong>Solution</strong>: I built an automated broken-link checker.</p>
 
         <div class="more-content">
-          <img src="{{ url_for('static', filename='images/broken-links.png') }}" alt="Broken links spreadsheet" class="project-image">
+          <img src="static/images/broken-links.png" alt="Broken links spreadsheet" class="project-image">
         </div>
 
         <p class="read-more">See details</p>
@@ -99,4 +135,16 @@
 
   </div>
 
-{% endblock %}
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Reed Alexander Cooley | <a href="mailto:reedcooley@gmail.com" id="contact-me">Contact me</a></p>
+  </footer>
+
+  <!-- Include JavaScript files -->
+  <script src="static/script.js"></script>
+   <!-- Placeholder for additional scripts -->
+</body>
+</html>

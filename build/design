@@ -1,8 +1,44 @@
-{% extends "base.html" %}
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" class="no-js"> <!-- Moved 'no-js' to <html> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure proper scaling on mobile devices -->
+  <title>Design - Reed Alexander Cooley</title>
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    // Add the 'js' class to the <html> element as soon as possible
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+  </script>
+   <!-- Placeholder for additional head elements -->
 
-{% block title %}Design - Reed Alexander Cooley{% endblock %}
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMCH14ZV0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-{% block content %}
+  gtag('config', 'G-JMCH14ZV0M');
+</script>
+<body>    
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="">Home</a></li>
+      <li><a href="writing" class="">Writing</a></li>
+      <li><a href="design" class="active">Design</a></li>
+      <li><a href="process_page" class="">Process</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    
 
   <div class="container projects">
     <header>
@@ -20,9 +56,9 @@
         <div class="more-content">
            <p><strong>Impact</strong>: Created a modern sidebar TOC, split the Help Center into dedicated spaces for business admins and end users, and aligned the support site with the new company branding, improving usability and customer confidence.</p> 
           <p><strong>Before:</strong></p>
-          <img src="{{ url_for('static', filename='images/before-redesign.png') }}" alt="HC before redesign" class="project-image">
+          <img src="static/images/before-redesign.png" alt="HC before redesign" class="project-image">
           <p><strong>After:</strong></p>
-          <img src="{{ url_for('static', filename='images/redesign.png') }}" alt="HC after redesign" class="project-image">
+          <img src="static/images/redesign.png" alt="HC after redesign" class="project-image">
 
         </div>
         <p class="read-more" aria-label="Show project details">See details</p>
@@ -44,13 +80,13 @@
         <div class="more-content">
          
           <p><strong>Before: Navigation menu</strong></p>
-          <img src="{{ url_for('static', filename='images/nav-before.png') }}" alt="Nav before redesign" class="project-image">
+          <img src="static/images/nav-before.png" alt="Nav before redesign" class="project-image">
           <p><strong>After: Navigation menu</strong></p>
-          <img src="{{ url_for('static', filename='images/nav-after.png') }}" alt="Nav after redesign" class="project-image">
+          <img src="static/images/nav-after.png" alt="Nav after redesign" class="project-image">
           <p><strong>Before: Category page</strong></p>
-          <img src="{{ url_for('static', filename='images/category-before.png') }}" alt="Category page before redesign" class="project-image">
+          <img src="static/images/category-before.png" alt="Category page before redesign" class="project-image">
           <p><strong>After: Category page</strong></p>
-          <img src="{{ url_for('static', filename='images/category-after.png') }}" alt="Category page after redesign" class="project-image">
+          <img src="static/images/category-after.png" alt="Category page after redesign" class="project-image">
 
         </div>
         <p class="read-more" aria-label="Show project details">See details</p>
@@ -60,4 +96,16 @@
 
   </div>
 
-{% endblock %}
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Reed Alexander Cooley | <a href="mailto:reedcooley@gmail.com" id="contact-me">Contact me</a></p>
+  </footer>
+
+  <!-- Include JavaScript files -->
+  <script src="static/script.js"></script>
+   <!-- Placeholder for additional scripts -->
+</body>
+</html>
