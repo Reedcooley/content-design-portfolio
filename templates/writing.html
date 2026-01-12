@@ -1,71 +1,113 @@
 {% extends "base.html" %}
-
 {% block title %}Writing - Reed Alexander Cooley{% endblock %}
 
 {% block content %}
+<div class="container projects">
 
-  <div class="container projects">
-    <header>
-      <h1>Writing</h1>
-      <p>I focus on clear, plain-language writing that helps users understand complex or sensitive topics while maintaining accuracy and trust.</p>
-    </header>
+  <header>
+    <h1>Writing</h1>
+    <p>
+      I focus on clear, plain-language writing that helps users understand complex or sensitive topics
+      while maintaining accuracy and trust.
+    </p>
+  </header>
 
-    <div class="project-section" id="passkeys-revamp">
-      <div class="project-header">
-        <h2>Revamp of support content on passkeys</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Our Help Center article on passkeys expanded over time as industry adoption and our own investment in passkeys grew. As the article became more overloaded with information, we saw a drop in its helpfulness score and received feedback that some visitors found the article confusing.</p>
-
-        <p><strong>Solution</strong>: I revamped the article with the aim of making it easier to navigate and improving the helpfulness score.</p>
-
-        <div class="more-content">
-          <p><strong>Challenges</strong>:</p>
-          <ul>
-            <li>Users have widely variable knowledge about passkeys.</li>
-            <li>Users are searching for "passkeys" for different reasons.</li>
-            <li>Passkeys depend on complex technology, but the user experience is simple and familiar.</li>
-          </ul>
-
-          <p><strong>Approach</strong>:</p>
-          <ul>
-            <li>I created a parent article for all passkey-related questions.</li>
-            <li>I developed focused child articles for deeper documentation.</li>
-            <li>I created product-specific setup guides.</li>
-          </ul>
-
-          <p><strong>Results</strong>: This revamp is recent, but similar structural approaches on other topics have led to sustained increases in helpfulness scores of up to 12 percentage points.</p>
-
-          <img src="{{ url_for('static', filename='images/passkeys.png') }}" alt="Passkeys Revamp Screenshot" class="project-image" style="display:none;">
-        </div>
-
-        <p class="read-more">See details</p>
-      </div>
+  <!-- ===================== -->
+  <!-- Passkeys Revamp -->
+  <!-- ===================== -->
+  <div class="project-section" id="passkeys-revamp">
+    <div class="project-header">
+      <h2>Revamp of support content on passkeys</h2>
     </div>
 
-    <div class="project-section" id="dark-web-monitoring">
-      <div class="project-header">
-        <h2>Explanation of Dark Web Monitoring security compliance</h2>
+    <div class="project-content">
+      <p><strong>Problem</strong>: Our Help Center article on passkeys expanded over time as industry adoption and our own investment in passkeys grew. As the article became more overloaded with information, we saw a drop in its helpfulness score and received feedback that some visitors found the article confusing.</p>
+      <p><strong>Solution</strong>: I revamped the article with the aim of making it easier to navigate and improving the helpfulness score.</p>
+
+      <div class="more-content">
+        <p><strong>Challenges</strong>:</p>
+        <ul>
+          <li>Users have widely variable knowledge about passkeys.</li>
+          <li>Users are searching for "passkeys" for different reasons — from general information to specific documentation on using them in our product.</li>
+          <li>Passkeys depend on complex technology, but the user experience is simple and familiar, which may confuse users about why it's such a big deal.</li>
+        </ul>
+
+        <p><strong>Approach</strong>:</p>
+        <ul>
+          <li>I created a parent article for all passkey-related questions, providing a high-level intro to passkeys and directing users to the appropriate content.</li>
+          <li>I developed focused child articles that deal with specific product documentation and deeper details.</li>
+          <li>In tandem with our product marketing and support teams, I created a series of articles explaining how to use our app to set up and store passkeys for specific sites like Amazon and GitHub.</li>
+        </ul>
+
+        <p><strong>Before and after</strong>:</p>
+        <ul>
+          <li><a href="https://web.archive.org/web/20240522030313/https://support.dashlane.com/hc/en-us/articles/7888558064274-Passkeys-in-Dashlane" target="_blank" rel="noopener noreferrer">View the previous version in the Wayback Machine</a></li>
+          <li><a href="https://support.dashlane.com/hc/articles/7888558064274" target="_blank" rel="noopener noreferrer">Read the revamped suite of passkey articles</a></li>
+        </ul>
+
+        <p><strong>Results</strong>: This revamp is recent, but similar structural approaches on other topics have led to sustained increases in helpfulness scores of up to 12 percentage points.</p>
+
+        <p><strong>View similar approaches on other topics</strong>:</p>
+        <ul>
+          <li><a href="https://support.dashlane.com/hc/articles/202699341" target="_blank">Manage subscription and billing for Dashlane personal plans</a></li>
+          <li><a href="https://support.dashlane.com/hc/articles/202625042" target="_blank">2-factor authentication (2FA) in Dashlane</a></li>
+        </ul>
+
+        <img src="{{ url_for('static', filename='images/passkeys.png') }}" alt="Passkeys Revamp Screenshot" class="project-image" style="display:none;">
       </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Users needed to understand how dark web monitoring works within a zero-knowledge security model.</p>
 
-        <p><strong>Solution</strong>: I created an FAQ explaining the feature without exposing user passwords.</p>
-
-        <div class="more-content">
-          <ul>
-            <li>Explained complex security concepts clearly.</li>
-            <li>Maintained trust while reducing confusion.</li>
-            <li>Supported a high-profile product launch.</li>
-          </ul>
-
-          <img src="{{ url_for('static', filename='images/dwmmp.png') }}" alt="Dark Web Monitoring Screenshot" class="project-image">
-        </div>
-
-        <p class="read-more">See details</p>
-      </div>
+      <p class="read-more" aria-label="Show project details">See details</p>
     </div>
-
   </div>
 
+
+  <!-- ===================== -->
+  <!-- Dark Web Monitoring -->
+  <!-- ===================== -->
+  <div class="project-section" id="dark-web-monitoring">
+    <div class="project-header">
+      <h2>Explanation of Dark Web Monitoring security compliance</h2>
+    </div>
+
+    <div class="project-content">
+      <p><strong>Problem</strong>: Our company upholds a zero-knowledge principle, meaning we protect user data such that even company employees don’t have access to it. We introduced a new feature that detects if a user's password has been found on the dark web. Before release, we anticipated that some users might be confused about how the feature complies with our zero-knowledge policy.</p>
+      <p><strong>Solution</strong>: I created an FAQ entry to explain how dark web monitoring works without exposing user passwords.</p>
+
+      <div class="more-content">
+        <div>
+          <strong>Challenges</strong>:
+          <ul>
+            <li>Users have varying levels of technical proficiency.</li>
+            <li>Explaining dark web monitoring accurately requires highly technical engineering terms.</li>
+            <li>Some users care deeply about this, while others don’t at all.</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Approach</strong>:
+          <ul>
+            <li>I created an FAQ to explain the feature.</li>
+            <li>I introduced technical concepts like hash functions and k-anonymity with short definitions.</li>
+            <li>I folded the FAQ into an accordion header for easy access.</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Results</strong>:
+          <ul>
+            <li>Clear explanation of a complex, security-sensitive concept.</li>
+            <li>Positive feedback from marketing, security, and engineering teams.</li>
+            <li>Successful high-profile launch with no user confusion.</li>
+            <li>No clarification requests over a year after publication.</li>
+          </ul>
+        </div>
+
+        <img src="{{ url_for('static', filename='images/dwmmp.png') }}" alt="Dark Web Monitoring Screenshot" class="project-image">
+      </div>
+
+      <p class="read-more" aria-label="Show project details">See details</p>
+    </div>
+  </div>
+
+</div>
 {% endblock %}

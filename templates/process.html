@@ -1,102 +1,132 @@
 {% extends "base.html" %}
 
-{% block title %}Process - Reed Alexander Cooley{% endblock %}
+{% block title %}Process – Reed Alexander Cooley{% endblock %}
 
 {% block content %}
+<div class="container projects">
 
-  <div class="container projects">
-    <header>
-      <h1>Process</h1>
-      <p>I design content systems and workflows that allow teams to deliver high-quality content efficiently, using automation and tooling to reduce friction while maintaining strong quality controls.</p>
-    </header>
+  <!-- ===================== -->
+  <!-- Page header -->
+  <!-- ===================== -->
+  <header class="page-header">
+    <h1>Process</h1>
+    <p>
+      I design content systems and workflows that allow teams to deliver high-quality content efficiently,
+      using automation and tooling to reduce friction while maintaining strong quality controls.
+    </p>
+  </header>
 
-    <div class="project-section" id="dark-web-monitoring">
-      <div class="project-header">
-        <h2>AI-based translation app</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Localizing a website is costly, time-consuming, and potentially error-prone.</p>
-        <p><strong>Solution</strong>: I designed and implemented an LLM-powered app that integrates with content management systems and provides inexpensive, instantaneous, and high-quality translations.</p>
 
-        <div class="more-content">
-          <p><strong>Impact</strong>:</p>
-          <ul>
-            <li>Reduced translation costs by over 99% and turnaround time from days or weeks to minutes.</li>
-            <li>Gave our team more oversight of translation quality and eliminated gaps in translated content due to process problems.</li>
-            <li>Enabled product, marketing, and CX teams to reuse the workflow across multiple content surfaces.</li>
-          </ul>
-
-          <p><strong>Details</strong>: Modern LLMs are excellent translators, especially for simple, concrete writing such as you find in good support content.</p>
-          <ul>
-            <li>Integration with Zendesk and any major LLM.</li>
-            <li>Bulk translation of multiple articles at once.</li>
-            <li>Targeted translation of individual articles and preview before publishing.</li>
-            <li>Full or partial translation based on changed sections.</li>
-            <li>Ad hoc translation of shorter texts.</li>
-            <li>Integration with an in-house glossary.</li>
-          </ul>
-
-          <img src="{{ url_for('static', filename='images/translation-queue.png') }}" alt="Translation queue" class="project-image">
-          <img src="{{ url_for('static', filename='images/translation-individual.png') }}" alt="Individual translation" class="project-image">
-        </div>
-
-        <p class="read-more">See details</p>
-      </div>
+  <!-- ===================== -->
+  <!-- AI Translation App -->
+  <!-- ===================== -->
+  <div class="project-section" id="ai-translation">
+    <div class="project-header">
+      <h2>AI-based translation app</h2>
     </div>
 
-    <div class="project-section" id="semantic-search">
-      <div class="project-header">
-        <h2>Company-wide semantic search prototype</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Company knowledge is scattered across multiple tools.</p>
-        <p><strong>Solution</strong>: I led a cross-functional team that built a hackathon-winning semantic search prototype.</p>
+    <div class="project-content">
+      <p><strong>Problem</strong>: Localizing a website is costly, time-consuming, and potentially error-prone.</p>
+      <p><strong>Solution</strong>: I designed and implemented an LLM-powered app that integrates with content management systems and provides inexpensive, instantaneous, and high-quality translations.</p>
 
-        <div class="more-content">
-          <ul>
-            <li>Integrated Confluence, Zendesk, and WordPress.</li>
-            <li>Built a unified search UI.</li>
-            <li>Aligned architecture with security requirements.</li>
-            <li>Produced an explainer video for leadership.</li>
-          </ul>
-        </div>
+      <div class="more-content">
+        <p><strong>Impact</strong>:</p>
+        <ul>
+          <li>Reduced translation costs by over 99% and turnaround time from days or weeks to minutes.</li>
+          <li>Gave our team more oversight of translation quality and eliminated gaps in translated content.</li>
+          <li>Enabled product, marketing, and CX teams to reuse the workflow across multiple content surfaces.</li>
+        </ul>
 
-        <p class="read-more">See details</p>
+        <p><strong>Details</strong>:</p>
+        <ul>
+          <li>Integration with Zendesk and any major LLM</li>
+          <li>Bulk translation of multiple articles</li>
+          <li>Targeted translation of individual articles with preview before publishing</li>
+          <li>Partial or full translation based on changed sections</li>
+          <li>Ad-hoc translation of short texts</li>
+          <li>Integration with an in-house glossary</li>
+        </ul>
+
+        <img src="{{ url_for('static', filename='images/translation-queue.png') }}" alt="Translation queue" class="project-image">
+        <img src="{{ url_for('static', filename='images/translation-individual.png') }}" alt="Individual translation" class="project-image">
       </div>
+
+      <button class="read-more" aria-expanded="false">See details</button>
     </div>
-
-    <div class="project-section" id="article-management">
-      <div class="project-header">
-        <h2>Living article management spreadsheet</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Tracking content metadata across a growing Help Center is difficult.</p>
-        <p><strong>Solution</strong>: I built a script that pulls Zendesk metadata into a shared spreadsheet.</p>
-
-        <div class="more-content">
-          <img src="{{ url_for('static', filename='images/article-management.png') }}" alt="Article management spreadsheet" class="project-image">
-        </div>
-
-        <p class="read-more">See details</p>
-      </div>
-    </div>
-
-    <div class="project-section" id="broken-links">
-      <div class="project-header">
-        <h2>Broken link finder</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Broken links degrade trust and UX.</p>
-        <p><strong>Solution</strong>: I built an automated broken-link checker.</p>
-
-        <div class="more-content">
-          <img src="{{ url_for('static', filename='images/broken-links.png') }}" alt="Broken links spreadsheet" class="project-image">
-        </div>
-
-        <p class="read-more">See details</p>
-      </div>
-    </div>
-
   </div>
 
+
+  <!-- ===================== -->
+  <!-- Semantic Search -->
+  <!-- ===================== -->
+  <div class="project-section" id="semantic-search">
+    <div class="project-header">
+      <h2>Company-wide semantic search prototype</h2>
+    </div>
+
+    <div class="project-content">
+      <p><strong>Problem</strong>: Company knowledge is scattered across multiple tools.</p>
+      <p><strong>Solution</strong>: I led a cross-functional team that built a hackathon-winning semantic search prototype.</p>
+
+      <div class="more-content">
+       <p><strong>Impact</strong>: Won the internal hackathon, validating the approach and garnering enthusiasm for a production-ready version of the tool.</p>
+       <p><strong>Details</strong>:</p>
+       <ul>
+        <li>Worked with tools team, IT, and engineering to design pipeline for integrating data from Confluence, Zendesk, and WordPress with a single AI search tool.</li>
+        <li>Created a simple UI exposing a single search bar on our Help Center site with source filters and deep links.</li> <li>Worked with security team to align architecture to company security posture.</li> <li>Commissioned and oversaw creation of an engaging wrap-up video for the hackathon closing ceremony.</li> </ul>
+      </div>
+
+      <button class="read-more" aria-expanded="false">See details</button>
+    </div>
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- Article Management -->
+  <!-- ===================== -->
+  <div class="project-section" id="article-management">
+    <div class="project-header">
+      <h2>Living article management spreadsheet</h2>
+    </div>
+
+    <div class="project-content">
+     <!-- Visible by default --> <p><strong>Problem</strong>: As a blog or support website grows, it can be difficult to keep track of pages and other associated information like page locations, labels, and authors.</p> <p><strong>Solution</strong>: I created a script that pulls metadata for all pages on a Zendesk-based site automatically into a shared team spreadsheet.</p>s
+      <div class="more-content">
+        <p><strong>Impact</strong>: </p> <ul> <li>Saved hours of manual work each month.</li> <li> Eliminated gaps and errors in article metadata. </li> <li> Built foundation for additional automation such as broken link checks and macro tracking. </li> </ul> <p><strong>Details</strong>: The script exports article metadata from Zendesk API at regular intervals, reformats the data, and imports it to a shared spreadsheet on Google Sheets. You can sort or filter the spreadsheet by article creation date, category, section, label, and so on. This allows you to efficiently manage your content.</p>
+        <img src="{{ url_for('static', filename='images/article-management.png') }}" alt="Article management spreadsheet" class="project-image">
+      </div>
+
+      <button class="read-more" aria-expanded="false">See details</button>
+    </div>
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- Broken Links -->
+  <!-- ===================== -->
+  <div class="project-section" id="broken-links">
+    <div class="project-header">
+      <h2>Broken link finder</h2>
+    </div>
+
+    <div class="project-content">
+      <p><strong>Problem</strong>: Even if careful link checks are built into the content management process, broken links can occur for all kinds of reasons.</p>
+      <p><strong>Solution</strong>: I created a script that checks automatically for broken links and exports the link info to a shared spreadsheet.</p>
+      <!-- Hidden content -->
+       <div class="more-content"> <p><strong>Impact</strong>: </p>
+        <ul>
+          <li>Reduced time-to-discovery from days or weeks to less than 24 hours.</li> <li>Improved user experience by eliminating broken links on the site.</li>
+          <li>Provided a simple way for non-technical team members to identify and fix broken links.</li>
+        </ul>
+        <p><strong>Details</strong>: The script checks all links in published articles and exports info regarding broken links to a shared spreadsheet in Google Sheets. The spreadsheet displays the number of broken links found in each article for each locale as well as the error code encountered. </p>
+        <p>The script is intended to return some false positives. For example, if the target page of a link requires authentication, the link still appears on the list. In this situation, you can manually select the ignore box in the spreadsheet. If the same link and error code appear the next time you run the script, the ignore box remains selected. </p>
+
+        <img src="{{ url_for('static', filename='images/broken-links.png') }}" alt="Broken links spreadsheet" class="project-image">
+      </div>
+
+      <button class="read-more" aria-expanded="false">See details</button>
+    </div>
+  </div>
+
+</div>
 {% endblock %}

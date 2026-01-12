@@ -3,61 +3,79 @@
 {% block title %}Design - Reed Alexander Cooley{% endblock %}
 
 {% block content %}
+<div class="container projects">
 
-  <div class="container projects">
-    <header>
-      <h1>Design</h1>
-      <p>I use content design—structure, layout, and interaction—to help users access the right level of information at the right moment, balancing clarity, engagement, and necessary detail.</p>
-    </header>
-    <div class="project-section" id="dark-web-monitoring">
-      <div class="project-header">
-        <h2>Redesign of Help Center for brand alignment and usability</h2>
-      </div>
+  <header>
+    <h1>Design</h1>
+    <p>
+      I use content design—structure, layout, and interaction—to help users access the right level of information
+      at the right moment, balancing clarity, engagement, and necessary detail.
+    </p>
+  </header>
 
-      <div class="project-content">
-        <p><strong>Problem</strong>: Our Help Center needed updating to align with the company's imminent rebrand.</p>
-        <p><strong>Solution</strong>: I consulted closely with design partners while owning the content structure and front-end implementation of a complete Help Center overhaul.</p>
-        <div class="more-content">
-           <p><strong>Impact</strong>: Created a modern sidebar TOC, split the Help Center into dedicated spaces for business admins and end users, and aligned the support site with the new company branding, improving usability and customer confidence.</p> 
-          <p><strong>Before:</strong></p>
-          <img src="{{ url_for('static', filename='images/before-redesign.png') }}" alt="HC before redesign" class="project-image">
-          <p><strong>After:</strong></p>
-          <img src="{{ url_for('static', filename='images/redesign.png') }}" alt="HC after redesign" class="project-image">
 
-        </div>
-        <p class="read-more" aria-label="Show project details">See details</p>
-
-      </div>
-    </div>
-    <div class="project-section" id="reorg">
-      <div class="project-header">
-        <h2>Reorganization of Help Center information architecture</h2>
-      </div>
-      <div class="project-content">
-        <p><strong>Problem</strong>: Our Help Center was originally created by a support team without a design background, and over time the site became cluttered and overloaded with information, making it difficult for users to find answers efficiently.</p>
-        <p><strong>Solution</strong>:</p>
-        <ul>
-          <li>I defined and implemented a new structure and hierarchy for categories, sections, and articles.</li>
-          <li>I reduced and consolidated the number of categories and sections.</li>
-          <li>I redesigned category pages for easier navigation and a more attractive presentation.</li>
-        </ul>
-        <div class="more-content">
-         
-          <p><strong>Before: Navigation menu</strong></p>
-          <img src="{{ url_for('static', filename='images/nav-before.png') }}" alt="Nav before redesign" class="project-image">
-          <p><strong>After: Navigation menu</strong></p>
-          <img src="{{ url_for('static', filename='images/nav-after.png') }}" alt="Nav after redesign" class="project-image">
-          <p><strong>Before: Category page</strong></p>
-          <img src="{{ url_for('static', filename='images/category-before.png') }}" alt="Category page before redesign" class="project-image">
-          <p><strong>After: Category page</strong></p>
-          <img src="{{ url_for('static', filename='images/category-after.png') }}" alt="Category page after redesign" class="project-image">
-
-        </div>
-        <p class="read-more" aria-label="Show project details">See details</p>
-
-      </div>
+  <!-- ===================== -->
+  <!-- Help Center Redesign -->
+  <!-- ===================== -->
+  <div class="project-section" id="dark-web-monitoring">
+    <div class="project-header">
+      <h2>Redesign of Help Center for brand alignment and usability</h2>
     </div>
 
+    <div class="project-content">
+      <p><strong>Problem</strong>: Our Help Center needed updating to align with the company's imminent rebrand.</p>
+      <p><strong>Solution</strong>: I consulted closely with design partners while owning the content structure and front-end implementation of a complete Help Center overhaul.</p>
+
+      <div class="more-content">
+        <p><strong>Impact</strong>: Created a modern sidebar TOC, split the Help Center into dedicated spaces for business admins and end users, and aligned the support site with the new company branding, improving usability and customer confidence.</p>
+
+        <p><strong>Before:</strong></p>
+        <img src="{{ url_for('static', filename='images/before-redesign.png') }}" alt="HC before redesign" class="project-image">
+
+        <p><strong>After:</strong></p>
+        <img src="{{ url_for('static', filename='images/redesign.png') }}" alt="HC after redesign" class="project-image">
+      </div>
+
+      <p class="read-more" aria-label="Show project details">See details</p>
+    </div>
   </div>
 
+
+  <!-- ===================== -->
+  <!-- IA Reorganization -->
+  <!-- ===================== -->
+  <div class="project-section" id="reorg">
+    <div class="project-header">
+      <h2>Reorganization of Help Center information architecture</h2>
+    </div>
+
+    <div class="project-content">
+      <p><strong>Problem</strong>: Our Help Center was originally created by a support team without a design background, and over time the site became cluttered and overloaded with information, making it difficult for users to find answers efficiently.</p>
+
+      <p><strong>Solution</strong>:</p>
+      <ul>
+        <li>I defined and implemented a new structure and hierarchy for categories, sections, and articles.</li>
+        <li>I reduced and consolidated the number of categories and sections.</li>
+        <li>I redesigned category pages for easier navigation and a more attractive presentation.</li>
+      </ul>
+
+      <div class="more-content">
+        <p><strong>Before: Navigation menu</strong></p>
+        <img src="{{ url_for('static', filename='images/nav-before.png') }}" alt="Nav before redesign" class="project-image">
+
+        <p><strong>After: Navigation menu</strong></p>
+        <img src="{{ url_for('static', filename='images/nav-after.png') }}" alt="Nav after redesign" class="project-image">
+
+        <p><strong>Before: Category page</strong></p>
+        <img src="{{ url_for('static', filename='images/category-before.png') }}" alt="Category page before redesign" class="project-image">
+
+        <p><strong>After: Category page</strong></p>
+        <img src="{{ url_for('static', filename='images/category-after.png') }}" alt="Category page after redesign" class="project-image">
+      </div>
+
+      <p class="read-more" aria-label="Show project details">See details</p>
+    </div>
+  </div>
+
+</div>
 {% endblock %}
