@@ -1,0 +1,82 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en" class="no-js"> <!-- Moved 'no-js' to <html> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure proper scaling on mobile devices -->
+  <title>Home - Reed Alexander Cooley</title>
+  <!-- Link to the CSS file using Flask's url_for -->
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    // Add the 'js' class to the <html> element as soon as possible
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+  </script>
+   <!-- Placeholder for additional head elements -->
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMCH14ZV0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JMCH14ZV0M');
+</script>
+<body>    
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="writing/index.html" class="">Writing</a></li>
+      <li><a href="design/index.html" class="">Design</a></li>
+      <li><a href="process_page/index.html" class="">Process</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+
+  <div class="container home-page">
+    <header>
+      <h1>Reed Alexander Cooley</h1>
+      <p>Senior Content Designer & Operations Lead</p>
+    </header>
+    <div class="button-container">
+      <!-- Link to the 'writing' route -->
+      <a href="writing/index.html" class="button">
+        <h2>Writing</h2>
+        <p>Clear, audience-aware writing that makes complex topics engaging and understandable</p>
+      </a>
+      <!-- Link to the 'design' route -->
+      <a href="design/index.html" class="button">
+        <h2>Design</h2>
+        <p>Content-driven design decisions that balance clarity, depth, and user engagement</p>
+      </a>
+      <!-- Link to the 'process_page' route to avoid conflict with 'process' POST route -->
+      <a href="process_page/index.html" class="button">
+        <h2>Process</h2>
+        <p>Content systems, automation, and tooling that support quality at scale</p>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Reed Alexander Cooley | <a href="mailto:reedcooley@gmail.com" id="contact-me">Contact me</a></p>
+  </footer>
+
+  <!-- Include JavaScript files -->
+  <script src="static/script.js"></script>
+   <!-- Placeholder for additional scripts -->
+</body>
+</html>
